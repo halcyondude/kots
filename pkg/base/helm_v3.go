@@ -91,7 +91,10 @@ func renderHelmV3(chartName string, chartPath string, vals map[string]interface{
 			rel.Namespace = namespace()
 		}
 		rel.Info.Status = rspb.StatusDeployed
-		rel.Info.FirstDeployed, _ = helmtime.Parse(time.RFC3339, "1970-01-01T01:00:00") // override first deployed time to avoid spurious diffs
+
+		// override deployed times to avoid spurious diffs
+		rel.Info.FirstDeployed, _ = helmtime.Parse(time.RFC3339, "1970-01-01T01:00:00")
+		rel.Info.LastDeployed, _ = helmtime.Parse(time.RFC3339, "1970-01-01T01:00:00")
 
 		helmReleaseSecretObj, err := newSecretsObject(rel)
 		if err != nil {
