@@ -1,10 +1,22 @@
 name: regression
 
 on:
-  push:
-    tags:
+  workflow_dispatch:
+    inputs:
+      version_tag_old:
+        description: 'The initial install version to use for upgrade scenarios'
+        required: true
+#        default: ''
+      version_tag_new:
+        description: 'The new version to use as the upgrade in upgrade scenarios and the initial version for fresh installs.'
+        required: true
+#        default: ''
+
+#on:
+#  push:
+#    tags:
 #      - "v*.*.*-nightly"
-      - "z*.*.*-testing"
+#      - "z*.*.*-testing"
 
 env:
   AWS_DEFAULT_REGION: us-east-1
