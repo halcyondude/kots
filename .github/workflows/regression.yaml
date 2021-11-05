@@ -11,11 +11,6 @@ on:
         description: 'The new version to use as the upgrade in upgrade scenarios and the initial version for fresh installs.'
         required: true
 #        default: ''
-#
-#  push:
-#    tags:
-##      - "v*.*.*-nightly"
-#      - "z*.*.*-testing"
 
 env:
   AWS_DEFAULT_REGION: us-east-1
@@ -25,7 +20,8 @@ env:
   TF_WORKSPACE: automation
 
 jobs:
-  terraform-cleanup-test-instances:
+  destroy-test-infra:
+    if: always()
     runs-on: ubuntu-20.04
     container:
       image: hashicorp/terraform:1.0.7
@@ -128,7 +124,8 @@ jobs:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
 
 
-  terraform-destroy-jumpbox:
+  destroy-jumpbox:
+    if: always()
     needs: terraform-cleanup-test-instances
     runs-on: ubuntu-20.04
     container:
@@ -164,7 +161,8 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.KOTS_BUILD_STATUS_SLACK_WEBHOOK_URL }}
 
-  terraform-setup-jumpbox:
+  create-jumpbox:
+    if: always()
     needs: terraform-destroy-jumpbox
     runs-on: ubuntu-20.04
     container:
@@ -217,7 +215,8 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.KOTS_BUILD_STATUS_SLACK_WEBHOOK_URL }}
 
 
-  terraform-setup-test-instances:
+  create-test-infra:
+    if: always()
     needs: terraform-setup-jumpbox
     runs-on: ubuntu-20.04
     container:
@@ -338,7 +337,8 @@ jobs:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
 
 
-  testim-run-regression-tests:
+  run-tests:
+    if: always()
     needs: terraform-setup-test-instances
     runs-on: ubuntu-20.04
     container:
