@@ -32,7 +32,6 @@ jobs:
     steps:
       - name: Init test environment
         id: init_test_env
-        working-directory: automation/cluster
         run: |
           echo "test"
 
