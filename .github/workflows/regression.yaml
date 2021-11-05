@@ -15,7 +15,6 @@ env:
 
 jobs:
   terraform-cleanup-test-instances:
-    needs: copy_nightly
     runs-on: ubuntu-20.04
     container:
       image: hashicorp/terraform:1.0.7
