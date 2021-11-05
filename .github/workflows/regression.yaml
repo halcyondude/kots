@@ -179,7 +179,6 @@ jobs:
 
   jumpbox:
     if: always()
-    needs: terraform-destroy-jumpbox
     runs-on: ubuntu-20.04
     container:
       image: hashicorp/terraform:1.0.7
