@@ -12,11 +12,10 @@ on:
         required: true
 #        default: ''
 
-#on:
-#  push:
-#    tags:
+  push:
+    tags:
 #      - "v*.*.*-nightly"
-#      - "z*.*.*-testing"
+      - "z*.*.*-testing"
 
 env:
   AWS_DEFAULT_REGION: us-east-1
