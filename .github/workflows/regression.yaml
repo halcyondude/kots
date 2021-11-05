@@ -335,7 +335,7 @@ jobs:
           ./${{ matrix.test.terraform_script }} apply
 
       - name: Run the test
-        working-directory: automation/jumpbox
+        working-directory: automation/cluster
         run: |
           terraform output -raw jumpbox_ip_public > ssh.pem
           chmod 600 ssh.pem
