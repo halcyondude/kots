@@ -299,17 +299,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Get tags
-        id: get_tag
-        uses: ./actions/version-tag
-
-      - name: Get latest tag
-        id: get_latest_tag
-        uses: pozetroninc/github-action-get-latest-release@master
-        with:
-          repository: ${{ github.repository }}
-          excludes: prerelease, draft
-
       - name: Checkout
         uses: actions/checkout@v2
         with:
@@ -321,8 +310,8 @@ jobs:
       - name: Create test environment
         working-directory: automation/cluster
         run: |
-          export CURRENT_TAG=${{ steps.get_latest_tag.outputs.release }}
-          export NEXT_TAG=${{ steps.get_tag.outputs.GIT_TAG }}
+          export CURRENT_TAG=${{ github.event.inputs.version_tag_old }}
+          export NEXT_TAG=${{ github.event.inputs.version_tag_new }}
           if [ "${{ matrix.test.is_upgrade }}" ]; then
             export TF_VAR_kots_version_initial="${CURRENT_TAG:1}"
             export TF_VAR_kots_version_upgrade="${NEXT_TAG:1}"
