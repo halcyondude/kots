@@ -5,6 +5,7 @@ import (
 
 	"github.com/blang/semver"
 	v1beta1 "github.com/replicatedhq/kots/kotskinds/apis/kots/v1beta1"
+	"github.com/replicatedhq/kots/pkg/cursor"
 	storetypes "github.com/replicatedhq/kots/pkg/store/types"
 )
 
@@ -18,7 +19,11 @@ type Downstream struct {
 }
 
 type DownstreamVersion struct {
+	ChannelID                string                             `json:"channelID"`
+	ChannelName              string                             `json:"channelName"`
 	VersionLabel             string                             `json:"versionLabel"`
+	UpdateCursor             string                             `json:"updateCursor"`
+	ParsedCursor             cursor.Cursor                      `json:"-"`
 	Semver                   *semver.Version                    `json:"semver,omitempty"`
 	Status                   storetypes.DownstreamVersionStatus `json:"status"`
 	CreatedOn                *time.Time                         `json:"createdOn"`
@@ -38,31 +43,64 @@ type DownstreamVersion struct {
 	YamlErrors               []v1beta1.InstallationYAMLError    `json:"yamlErrors,omitempty"`
 }
 
-type DownstreamVersions []DownstreamVersion
+type DownstreamVersions struct {
+	ChannelID       string
+	ChannelName     string
+	CurrentVersion  *DownstreamVersion
+	PendingVersions []DownstreamVersion
+	PastVersions    []DownstreamVersion
+	AllVersions     []DownstreamVersion
+}
 
-func (d DownstreamVersions) Len() int { return len(d) }
+func (d DownstreamVersions) Len() int { return len(d.AllVersions) }
 
-// Treating releases with semver as newer than those without.
+// Less will attempt to sort by semver, then by cursor, then by sequence.
 func (d DownstreamVersions) Less(i, j int) bool {
-	if d[i].Semver == nil && d[j].Semver == nil {
-		return d[i].Sequence < d[j].Sequence
+	if d.AllVersions[i].Semver != nil || d.AllVersions[j].Semver != nil {
+		return d.lessSemver(i, j)
 	}
-	if d[i].Semver == nil {
-		return true
+	if d.AllVersions[i].ParsedCursor != nil && d.AllVersions[j].ParsedCursor != nil {
+		return d.lessCursor(i, j)
 	}
-	if d[j].Semver == nil {
-		return false
+	return d.lessSequence(i, j)
+}
+
+func (d DownstreamVersions) lessSemver(i, j int) bool {
+	// Treating releases with semver as newer than those without if on different channel.
+	// Releases on the same channel will be sorted using cursor rules.
+	if d.AllVersions[i].Semver == nil {
+		return d.AllVersions[i].ChannelID != d.ChannelID
 	}
-	if d[i].Semver.EQ((*d[j].Semver)) {
-		return d[i].Sequence < d[j].Sequence
+
+	if d.AllVersions[j].Semver == nil {
+		return d.AllVersions[j].ChannelID == d.ChannelID
 	}
-	return d[i].Semver.LT((*d[j].Semver))
+
+	if d.AllVersions[i].Semver.EQ((*d.AllVersions[j].Semver)) {
+		return d.lessCursor(i, j)
+	}
+
+	return d.AllVersions[i].Semver.LT((*d.AllVersions[j].Semver))
+}
+
+func (d DownstreamVersions) lessCursor(i, j int) bool {
+	if d.AllVersions[i].ParsedCursor == nil || d.AllVersions[j].ParsedCursor == nil {
+		return d.lessSequence(i, j)
+	}
+	if d.AllVersions[i].ParsedCursor.Equal(d.AllVersions[j].ParsedCursor) {
+		return d.lessSequence(i, j)
+	}
+	return d.AllVersions[i].ParsedCursor.Before(d.AllVersions[j].ParsedCursor)
+}
+
+func (d DownstreamVersions) lessSequence(i, j int) bool {
+	return d.AllVersions[i].Sequence < d.AllVersions[j].Sequence
 }
 
 func (d DownstreamVersions) Swap(i, j int) {
-	tmp := d[i]
-	d[i] = d[j]
-	d[j] = tmp
+	tmp := d.AllVersions[i]
+	d.AllVersions[i] = d.AllVersions[j]
+	d.AllVersions[j] = tmp
 }
 
 type DownstreamOutput struct {

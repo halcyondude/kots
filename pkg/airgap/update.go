@@ -94,7 +94,6 @@ func UpdateAppFromPath(a *apptypes.App, airgapRoot string, airgapBundlePath stri
 	}
 	defer os.RemoveAll(currentArchivePath)
 
-	fmt.Printf("\n++++++++a:%#v\n", a)
 	err = store.GetStore().GetAppVersionArchive(a.ID, a.CurrentSequence, currentArchivePath)
 	if err != nil {
 		return errors.Wrap(err, "failed to get current archive")
