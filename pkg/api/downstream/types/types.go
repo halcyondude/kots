@@ -59,9 +59,9 @@ func (d DownstreamVersions) Less(i, j int) bool {
 	if d.AllVersions[i].Semver != nil || d.AllVersions[j].Semver != nil {
 		return d.lessSemver(i, j)
 	}
-	if d.AllVersions[i].ParsedCursor != nil && d.AllVersions[j].ParsedCursor != nil {
-		return d.lessCursor(i, j)
-	}
+	// if d.AllVersions[i].ParsedCursor != nil && d.AllVersions[j].ParsedCursor != nil {
+	// 	return d.lessCursor(i, j)
+	// }
 	return d.lessSequence(i, j)
 }
 
@@ -69,15 +69,15 @@ func (d DownstreamVersions) lessSemver(i, j int) bool {
 	// Treating releases with semver as newer than those without if on different channel.
 	// Releases on the same channel will be sorted using cursor rules.
 	if d.AllVersions[i].Semver == nil {
-		return d.AllVersions[i].ChannelID != d.ChannelID
+		return d.lessSequence(i, j)
 	}
 
 	if d.AllVersions[j].Semver == nil {
-		return d.AllVersions[j].ChannelID == d.ChannelID
+		return d.lessSequence(i, j)
 	}
 
 	if d.AllVersions[i].Semver.EQ((*d.AllVersions[j].Semver)) {
-		return d.lessCursor(i, j)
+		return d.lessSequence(i, j)
 	}
 
 	return d.AllVersions[i].Semver.LT((*d.AllVersions[j].Semver))
