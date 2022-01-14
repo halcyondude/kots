@@ -24,7 +24,7 @@ require (
 	github.com/dexidp/dex v0.0.0-20210802203454-3fac2ab6bc3b
 	github.com/docker/distribution v2.7.1+incompatible
 	github.com/docker/go-units v0.4.0
-	github.com/fatih/color v1.12.0
+	github.com/fatih/color v1.13.0
 	github.com/frankban/quicktest v1.13.0 // indirect
 	github.com/garyburd/redigo v1.6.0 // indirect
 	github.com/ghodss/yaml v1.0.0
@@ -39,14 +39,14 @@ require (
 	github.com/gorilla/mux v1.8.0
 	github.com/gorilla/websocket v1.4.2
 	github.com/gosimple/slug v1.9.0
-	github.com/hashicorp/go-cleanhttp v0.5.1
+	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/heroku/docker-registry-client v0.0.0-20190909225348-afc9e1acc3d5
 	github.com/k3s-io/kine v0.7.3
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0 // indirect
 	github.com/lib/pq v1.10.2
 	github.com/manifoldco/promptui v0.8.0
 	github.com/marccampbell/yaml-toolbox v0.0.0-20200805160637-950ceb36c770
-	github.com/mattn/go-isatty v0.0.12
+	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-sqlite3 v1.14.8
 	github.com/mholt/archiver v3.1.1+incompatible
 	github.com/mitchellh/hashstructure v1.1.0
@@ -70,7 +70,7 @@ require (
 	github.com/sergi/go-diff v1.1.0
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/pflag v1.0.5
-	github.com/spf13/viper v1.8.1
+	github.com/spf13/viper v1.10.1
 	github.com/stretchr/testify v1.7.0
 	github.com/tj/go-spin v1.1.0
 	github.com/vmware-tanzu/velero v1.5.4
@@ -80,11 +80,11 @@ require (
 	go.uber.org/multierr v1.6.0
 	go.uber.org/zap v1.17.0
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
-	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f
-	google.golang.org/api v0.52.0
-	google.golang.org/grpc v1.39.0
+	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8
+	google.golang.org/api v0.63.0
+	google.golang.org/grpc v1.43.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
-	gopkg.in/ini.v1 v1.62.0
+	gopkg.in/ini.v1 v1.66.2
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 	gotest.tools v2.2.0+incompatible
