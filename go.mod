@@ -95,7 +95,7 @@ require (
 	k8s.io/cli-runtime v0.22.1
 	k8s.io/client-go v0.22.2
 	k8s.io/cluster-bootstrap v0.22.1
-	k8s.io/helm v2.14.3+incompatible
+	k8s.io/helm v2.17.0+incompatible
 	k8s.io/klog/v2 v2.9.0
 	k8s.io/kube-openapi v0.0.0-20210817084001-7fbd8d59e5b8 // indirect
 	k8s.io/kubelet v0.0.0
