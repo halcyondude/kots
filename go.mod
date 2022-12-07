@@ -17,7 +17,7 @@ require (
 	github.com/bugsnag/bugsnag-go v1.5.3 // indirect
 	github.com/bugsnag/panicwrap v1.2.0 // indirect
 	github.com/c9s/goprocinfo v0.0.0-20190309065803-0b2ad9ac246b // indirect
-	github.com/containerd/containerd v1.5.7
+	github.com/containerd/containerd v1.5.16
 	github.com/containers/image/v5 v5.15.2
 	github.com/containers/storage v1.37.0 // indirect
 	github.com/coreos/go-oidc v2.2.1+incompatible
@@ -51,7 +51,7 @@ require (
 	github.com/mholt/archiver v3.1.1+incompatible
 	github.com/mitchellh/hashstructure v1.1.0
 	github.com/open-policy-agent/opa v0.24.0
-	github.com/opencontainers/image-spec v1.0.2-0.20190823105129-775207bd45b6
+	github.com/opencontainers/image-spec v1.0.2
 	github.com/openshift/api v0.0.0-20210513192832-efee9960e6fd // indirect
 	github.com/openshift/client-go v0.0.0-20210503124028-ac0910aac9fa
 	github.com/otiai10/copy v1.0.2
