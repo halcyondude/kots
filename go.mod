@@ -29,7 +29,7 @@ require (
 	github.com/garyburd/redigo v1.6.0 // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-git/go-git/v5 v5.2.0
-	github.com/go-logfmt/logfmt v0.5.0
+	github.com/go-logfmt/logfmt v0.5.1
 	github.com/go-test/deep v1.0.7
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/golang/mock v1.6.0
@@ -71,43 +71,42 @@ require (
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.8.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.0
 	github.com/tj/go-spin v1.1.0
 	github.com/vmware-tanzu/velero v1.5.4
 	github.com/yvasiyarov/go-metrics v0.0.0-20150112132944-c25f46c4b940 // indirect
 	github.com/yvasiyarov/gorelic v0.0.7 // indirect
 	github.com/yvasiyarov/newrelic_platform_go v0.0.0-20160601141957-9c099fbc30e9 // indirect; indirect=
 	go.uber.org/multierr v1.6.0
-	go.uber.org/zap v1.17.0
-	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
-	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f
+	go.uber.org/zap v1.24.0
+	golang.org/x/crypto v0.1.0
+	golang.org/x/oauth2 v0.0.0-20220223155221-ee480838109b
 	google.golang.org/api v0.52.0
 	google.golang.org/grpc v1.39.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/ini.v1 v1.62.0
 	gopkg.in/yaml.v2 v2.4.0
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	gopkg.in/yaml.v3 v3.0.1
 	gotest.tools v2.2.0+incompatible
 	helm.sh/helm/v3 v3.7.1
-	k8s.io/api v0.22.2
-	k8s.io/apiextensions-apiserver v0.22.2
-	k8s.io/apimachinery v0.22.2
+	k8s.io/api v0.26.0
+	k8s.io/apiextensions-apiserver v0.26.0
+	k8s.io/apimachinery v0.26.0
 	k8s.io/cli-runtime v0.22.1
-	k8s.io/client-go v0.22.2
+	k8s.io/client-go v0.26.0
 	k8s.io/cluster-bootstrap v0.22.1
 	k8s.io/helm v2.14.3+incompatible
-	k8s.io/klog/v2 v2.9.0
-	k8s.io/kube-openapi v0.0.0-20210817084001-7fbd8d59e5b8 // indirect
+	k8s.io/klog/v2 v2.80.1
 	k8s.io/kubelet v0.0.0
 	k8s.io/kubernetes v1.22.1
 	k8s.io/metrics v0.16.15 // indirect
-	k8s.io/utils v0.0.0-20210819203725-bdf08cb9a70a
+	k8s.io/utils v0.0.0-20221128185143-99ec85e7a448
 	oras.land/oras-go v0.4.0
 	sigs.k8s.io/application v0.8.3
-	sigs.k8s.io/controller-runtime v0.8.3
+	sigs.k8s.io/controller-runtime v0.14.0
 	sigs.k8s.io/kustomize/api v0.8.11
 	sigs.k8s.io/kustomize/kyaml v0.11.0
-	sigs.k8s.io/yaml v1.2.0
+	sigs.k8s.io/yaml v1.3.0
 )
 
 replace (
