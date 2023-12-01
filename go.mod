@@ -24,7 +24,7 @@ require (
 	github.com/dexidp/dex v0.0.0-20210802203454-3fac2ab6bc3b
 	github.com/docker/distribution v2.7.1+incompatible
 	github.com/docker/go-units v0.4.0
-	github.com/fatih/color v1.12.0
+	github.com/fatih/color v1.16.0
 	github.com/frankban/quicktest v1.13.0 // indirect
 	github.com/garyburd/redigo v1.6.0 // indirect
 	github.com/ghodss/yaml v1.0.0
@@ -46,7 +46,7 @@ require (
 	github.com/lib/pq v1.10.2
 	github.com/manifoldco/promptui v0.8.0
 	github.com/marccampbell/yaml-toolbox v0.0.0-20200805160637-950ceb36c770
-	github.com/mattn/go-isatty v0.0.12
+	github.com/mattn/go-isatty v0.0.20
 	github.com/mattn/go-sqlite3 v1.14.8
 	github.com/mholt/archiver v3.1.1+incompatible
 	github.com/mitchellh/hashstructure v1.1.0
