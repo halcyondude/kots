@@ -22,7 +22,8 @@ require (
 	github.com/containers/storage v1.37.0 // indirect
 	github.com/coreos/go-oidc v2.2.1+incompatible
 	github.com/dexidp/dex v0.0.0-20210802203454-3fac2ab6bc3b
-	github.com/docker/distribution v2.7.1+incompatible
+	github.com/distribution/reference v0.5.0 // indirect
+	github.com/docker/distribution v2.8.3+incompatible
 	github.com/docker/go-units v0.4.0
 	github.com/fatih/color v1.12.0
 	github.com/frankban/quicktest v1.13.0 // indirect
