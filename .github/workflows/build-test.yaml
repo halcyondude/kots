@@ -40,7 +40,7 @@ jobs:
         uses: ./actions/version-tag
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '10'
 
@@ -305,7 +305,7 @@ jobs:
 
       - run: chmod +x bin/kots
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '10.x'
 
@@ -409,7 +409,7 @@ jobs:
 
       - run: chmod +x bin/kots
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '10.x'
 
@@ -473,7 +473,7 @@ jobs:
 
       - run: chmod +x bin/kots
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '10.x'
 
@@ -546,7 +546,7 @@ jobs:
 
       - run: chmod +x bin/kots
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '10.x'
 
