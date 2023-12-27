@@ -28,7 +28,7 @@ require (
 	github.com/frankban/quicktest v1.13.0 // indirect
 	github.com/garyburd/redigo v1.6.0 // indirect
 	github.com/ghodss/yaml v1.0.0
-	github.com/go-git/go-git/v5 v5.2.0
+	github.com/go-git/go-git/v5 v5.11.0
 	github.com/go-logfmt/logfmt v0.5.0
 	github.com/go-test/deep v1.0.7
 	github.com/golang-jwt/jwt v3.2.2+incompatible
@@ -71,7 +71,7 @@ require (
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.8.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.4
 	github.com/tj/go-spin v1.1.0
 	github.com/vmware-tanzu/velero v1.5.4
 	github.com/yvasiyarov/go-metrics v0.0.0-20150112132944-c25f46c4b940 // indirect
@@ -79,14 +79,14 @@ require (
 	github.com/yvasiyarov/newrelic_platform_go v0.0.0-20160601141957-9c099fbc30e9 // indirect; indirect=
 	go.uber.org/multierr v1.6.0
 	go.uber.org/zap v1.17.0
-	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
+	golang.org/x/crypto v0.16.0
 	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f
 	google.golang.org/api v0.52.0
 	google.golang.org/grpc v1.39.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/ini.v1 v1.62.0
 	gopkg.in/yaml.v2 v2.4.0
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	gopkg.in/yaml.v3 v3.0.1
 	gotest.tools v2.2.0+incompatible
 	helm.sh/helm/v3 v3.7.1
 	k8s.io/api v0.22.2
