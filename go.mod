@@ -3,40 +3,38 @@ module github.com/replicatedhq/kots
 go 1.16
 
 require (
-	cloud.google.com/go/storage v1.10.0
-	github.com/Azure/azure-sdk-for-go v55.0.0+incompatible
-	github.com/Azure/go-autorest/autorest v0.11.18
-	github.com/Azure/go-autorest/autorest/adal v0.9.13
+	cloud.google.com/go/storage v1.30.1
+	github.com/Azure/azure-sdk-for-go v56.3.0+incompatible
+	github.com/Azure/go-autorest/autorest v0.11.24
+	github.com/Azure/go-autorest/autorest/adal v0.9.18
 	github.com/Masterminds/semver v1.5.0
 	github.com/Masterminds/semver/v3 v3.1.1
 	github.com/Masterminds/sprig/v3 v3.2.2
 	github.com/ahmetalpbalkan/go-cursor v0.0.0-20131010032410-8136607ea412
-	github.com/aws/aws-sdk-go v1.38.49
+	github.com/aws/aws-sdk-go v1.43.16
 	github.com/bitnami-labs/sealed-secrets v0.14.1
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/bugsnag/bugsnag-go v1.5.3 // indirect
 	github.com/bugsnag/panicwrap v1.2.0 // indirect
 	github.com/c9s/goprocinfo v0.0.0-20190309065803-0b2ad9ac246b // indirect
-	github.com/containerd/containerd v1.5.7
+	github.com/containerd/containerd v1.7.12
 	github.com/containers/image/v5 v5.15.2
 	github.com/containers/storage v1.37.0 // indirect
 	github.com/coreos/go-oidc v2.2.1+incompatible
 	github.com/dexidp/dex v0.0.0-20210802203454-3fac2ab6bc3b
-	github.com/docker/distribution v2.7.1+incompatible
-	github.com/docker/go-units v0.4.0
+	github.com/docker/distribution v2.8.1+incompatible
+	github.com/docker/go-units v0.5.0
 	github.com/fatih/color v1.12.0
-	github.com/frankban/quicktest v1.13.0 // indirect
-	github.com/garyburd/redigo v1.6.0 // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-git/go-git/v5 v5.2.0
-	github.com/go-logfmt/logfmt v0.5.0
+	github.com/go-logfmt/logfmt v0.5.1
 	github.com/go-test/deep v1.0.7
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/golang/mock v1.6.0
 	github.com/google/go-github/v39 v39.0.0
 	github.com/google/gofuzz v1.2.0
-	github.com/google/uuid v1.2.0
-	github.com/gorilla/mux v1.8.0
+	github.com/google/uuid v1.6.0
+	github.com/gorilla/mux v1.8.1
 	github.com/gorilla/websocket v1.4.2
 	github.com/gosimple/slug v1.9.0
 	github.com/hashicorp/go-cleanhttp v0.5.1
@@ -46,16 +44,16 @@ require (
 	github.com/lib/pq v1.10.2
 	github.com/manifoldco/promptui v0.8.0
 	github.com/marccampbell/yaml-toolbox v0.0.0-20200805160637-950ceb36c770
-	github.com/mattn/go-isatty v0.0.12
-	github.com/mattn/go-sqlite3 v1.14.8
+	github.com/mattn/go-isatty v0.0.17
+	github.com/mattn/go-sqlite3 v1.14.15
 	github.com/mholt/archiver v3.1.1+incompatible
 	github.com/mitchellh/hashstructure v1.1.0
-	github.com/open-policy-agent/opa v0.24.0
-	github.com/opencontainers/image-spec v1.0.2-0.20190823105129-775207bd45b6
+	github.com/open-policy-agent/opa v0.61.0
+	github.com/opencontainers/image-spec v1.1.0-rc5
 	github.com/openshift/api v0.0.0-20210513192832-efee9960e6fd // indirect
 	github.com/openshift/client-go v0.0.0-20210503124028-ac0910aac9fa
 	github.com/otiai10/copy v1.0.2
-	github.com/phayes/freeport v0.0.0-20180830031419-95f893ade6f2
+	github.com/phayes/freeport v0.0.0-20220201140144-74d24b5ae9f5
 	github.com/pkg/errors v0.9.1
 	github.com/pmezard/go-difflib v1.0.0
 	github.com/pquerna/cachecontrol v0.0.0-20180517163645-1555304b9b35 // indirect
@@ -67,47 +65,48 @@ require (
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/schemahero/schemahero v0.12.2
 	github.com/segmentio/ksuid v1.0.3
-	github.com/sergi/go-diff v1.1.0
-	github.com/spf13/cobra v1.2.1
+	github.com/sergi/go-diff v1.3.1
+	github.com/spf13/cobra v1.8.0
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.8.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.4
 	github.com/tj/go-spin v1.1.0
 	github.com/vmware-tanzu/velero v1.5.4
 	github.com/yvasiyarov/go-metrics v0.0.0-20150112132944-c25f46c4b940 // indirect
 	github.com/yvasiyarov/gorelic v0.0.7 // indirect
 	github.com/yvasiyarov/newrelic_platform_go v0.0.0-20160601141957-9c099fbc30e9 // indirect; indirect=
+	go.opentelemetry.io/otel/internal/metric v0.27.0 // indirect
 	go.uber.org/multierr v1.6.0
 	go.uber.org/zap v1.17.0
-	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
-	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f
-	google.golang.org/api v0.52.0
-	google.golang.org/grpc v1.39.0
+	golang.org/x/crypto v0.16.0
+	golang.org/x/oauth2 v0.14.0
+	google.golang.org/api v0.149.0
+	google.golang.org/grpc v1.61.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/ini.v1 v1.62.0
 	gopkg.in/yaml.v2 v2.4.0
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	gopkg.in/yaml.v3 v3.0.1
 	gotest.tools v2.2.0+incompatible
 	helm.sh/helm/v3 v3.7.1
-	k8s.io/api v0.22.2
+	k8s.io/api v0.26.2
 	k8s.io/apiextensions-apiserver v0.22.2
-	k8s.io/apimachinery v0.22.2
+	k8s.io/apimachinery v0.26.2
 	k8s.io/cli-runtime v0.22.1
-	k8s.io/client-go v0.22.2
+	k8s.io/client-go v0.26.2
 	k8s.io/cluster-bootstrap v0.22.1
 	k8s.io/helm v2.14.3+incompatible
-	k8s.io/klog/v2 v2.9.0
+	k8s.io/klog/v2 v2.90.1
 	k8s.io/kube-openapi v0.0.0-20210817084001-7fbd8d59e5b8 // indirect
 	k8s.io/kubelet v0.0.0
 	k8s.io/kubernetes v1.22.1
 	k8s.io/metrics v0.16.15 // indirect
-	k8s.io/utils v0.0.0-20210819203725-bdf08cb9a70a
-	oras.land/oras-go v0.4.0
+	k8s.io/utils v0.0.0-20230220204549-a5ecb0141aa5
+	oras.land/oras-go v1.2.0
 	sigs.k8s.io/application v0.8.3
 	sigs.k8s.io/controller-runtime v0.8.3
 	sigs.k8s.io/kustomize/api v0.8.11
 	sigs.k8s.io/kustomize/kyaml v0.11.0
-	sigs.k8s.io/yaml v1.2.0
+	sigs.k8s.io/yaml v1.4.0
 )
 
 replace (
