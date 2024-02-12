@@ -3,7 +3,7 @@ module github.com/replicatedhq/kots
 go 1.16
 
 require (
-	cloud.google.com/go/storage v1.10.0
+	cloud.google.com/go/storage v1.30.1
 	github.com/Azure/azure-sdk-for-go v55.0.0+incompatible
 	github.com/Azure/go-autorest/autorest v0.11.18
 	github.com/Azure/go-autorest/autorest/adal v0.9.13
@@ -29,13 +29,13 @@ require (
 	github.com/garyburd/redigo v1.6.0 // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-git/go-git/v5 v5.2.0
-	github.com/go-logfmt/logfmt v0.5.0
+	github.com/go-logfmt/logfmt v0.5.1
 	github.com/go-test/deep v1.0.7
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/golang/mock v1.6.0
 	github.com/google/go-github/v39 v39.0.0
 	github.com/google/gofuzz v1.2.0
-	github.com/google/uuid v1.2.0
+	github.com/google/uuid v1.3.0
 	github.com/gorilla/mux v1.8.0
 	github.com/gorilla/websocket v1.4.2
 	github.com/gosimple/slug v1.9.0
@@ -46,8 +46,8 @@ require (
 	github.com/lib/pq v1.10.2
 	github.com/manifoldco/promptui v0.8.0
 	github.com/marccampbell/yaml-toolbox v0.0.0-20200805160637-950ceb36c770
-	github.com/mattn/go-isatty v0.0.12
-	github.com/mattn/go-sqlite3 v1.14.8
+	github.com/mattn/go-isatty v0.0.17
+	github.com/mattn/go-sqlite3 v1.14.15
 	github.com/mholt/archiver v3.1.1+incompatible
 	github.com/mitchellh/hashstructure v1.1.0
 	github.com/open-policy-agent/opa v0.24.0
@@ -71,43 +71,43 @@ require (
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.8.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.4
 	github.com/tj/go-spin v1.1.0
 	github.com/vmware-tanzu/velero v1.5.4
 	github.com/yvasiyarov/go-metrics v0.0.0-20150112132944-c25f46c4b940 // indirect
 	github.com/yvasiyarov/gorelic v0.0.7 // indirect
 	github.com/yvasiyarov/newrelic_platform_go v0.0.0-20160601141957-9c099fbc30e9 // indirect; indirect=
-	go.uber.org/multierr v1.6.0
-	go.uber.org/zap v1.17.0
-	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
-	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f
-	google.golang.org/api v0.52.0
-	google.golang.org/grpc v1.39.0
+	go.opentelemetry.io/otel/internal/metric v0.27.0 // indirect
+	go.uber.org/multierr v1.11.0
+	go.uber.org/zap v1.26.0
+	golang.org/x/crypto v0.16.0
+	golang.org/x/oauth2 v0.12.0
+	google.golang.org/api v0.126.0
+	google.golang.org/grpc v1.58.3
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/ini.v1 v1.62.0
 	gopkg.in/yaml.v2 v2.4.0
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	gopkg.in/yaml.v3 v3.0.1
 	gotest.tools v2.2.0+incompatible
 	helm.sh/helm/v3 v3.7.1
-	k8s.io/api v0.22.2
-	k8s.io/apiextensions-apiserver v0.22.2
-	k8s.io/apimachinery v0.22.2
+	k8s.io/api v0.29.0
+	k8s.io/apiextensions-apiserver v0.29.0
+	k8s.io/apimachinery v0.29.0
 	k8s.io/cli-runtime v0.22.1
-	k8s.io/client-go v0.22.2
+	k8s.io/client-go v0.29.0
 	k8s.io/cluster-bootstrap v0.22.1
 	k8s.io/helm v2.14.3+incompatible
-	k8s.io/klog/v2 v2.9.0
-	k8s.io/kube-openapi v0.0.0-20210817084001-7fbd8d59e5b8 // indirect
+	k8s.io/klog/v2 v2.110.1
 	k8s.io/kubelet v0.0.0
 	k8s.io/kubernetes v1.22.1
 	k8s.io/metrics v0.16.15 // indirect
-	k8s.io/utils v0.0.0-20210819203725-bdf08cb9a70a
+	k8s.io/utils v0.0.0-20230726121419-3b25d923346b
 	oras.land/oras-go v0.4.0
 	sigs.k8s.io/application v0.8.3
-	sigs.k8s.io/controller-runtime v0.8.3
+	sigs.k8s.io/controller-runtime v0.17.1
 	sigs.k8s.io/kustomize/api v0.8.11
 	sigs.k8s.io/kustomize/kyaml v0.11.0
-	sigs.k8s.io/yaml v1.2.0
+	sigs.k8s.io/yaml v1.4.0
 )
 
 replace (
